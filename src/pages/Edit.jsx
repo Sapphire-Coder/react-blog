@@ -25,13 +25,14 @@ export default function Edit() {
     }
 
     return (
-        <div>
+        <div className='main'>
+            <h1>Edit Post</h1>
             <form onSubmit={updPost}>
                 <input type = 'text' name = 'title' defaultValue={data.title} />
                 <input type = 'text' name = 'body' defaultValue={data.body} />
                 <input type = 'submit' />
             </form>
-            <button onClick = {delPost}>Delete Post</button>
+            <button type = 'submit' onClick = {delPost}>Delete Post</button>
         </div>
     )
 }

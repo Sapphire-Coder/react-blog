@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getPost } from '../services/posts-api'
+import { getPost, updatePost } from '../services/posts-api'
 
 export default function Show() {
 
@@ -14,13 +14,27 @@ export default function Show() {
             setData(res.data)
             setComments(res.data.comments)
         })
-    }, [])
+    }, [data])
+
+    const addComment = e => {
+        e.preventDefault()
+        const comment = comments
+        comment.push({ name: e.target.name.value, message: e.target.message.value })
+        const post = { title: data.title, body: data.body, comments: comment }
+        updatePost(id, post)
+        e.target.name.value = null
+        e.target.message.value = null
+    }
 
     return (
-        <div>
-            <h1>{data.title}</h1>
-            <h2>{data.body}</h2>
-            <button onClick = {() => navigate(`/${id}/edit`)}>Edit Post</button>
+        <div className='main'>
+            <div id = 'post'>
+                <h1>{data.title}</h1>
+                <h3>{data.body}</h3>
+                <div id = 'editBtn'>
+                   <button onClick = {() => navigate(`/${id}/edit`)}>Edit Post</button>
+                </div>
+            </div>
             <div>
                 {
                     comments.map((comment, i) => {
@@ -33,6 +47,13 @@ export default function Show() {
                     })
                 }
             </div>
+            <form onSubmit={addComment} id = 'commentBox'>
+                <label>Name</label><br/>
+                <input type = 'text' name = 'name' /> <br/>
+                <label>Comment</label><br/>
+                <input type = 'text' name = 'message' /> <br/>
+                <input type = 'submit' />
+            </form>
         </div>
     )
 }

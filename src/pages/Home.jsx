@@ -7,17 +7,17 @@ export default function Home() {
 
     useEffect(() => {
         getPosts().then(res => setData(res.data))
-    }, [])
+    }, [data])
 
     return (
-        <div>
+        <div className='main'>
             <h1>Blog Posts</h1>
-            <div id = 'container'>
+            <div id = 'postContainer'>
                 {
                     data.map((post, i) => {
                         return(
-                            <div key = {i}>
-                                <a href={`/${post._id}`} ><h2>{post.title}</h2></a>
+                            <div key = {i} className = 'posts'>
+                                <h2><a href={`/${post._id}`}>{post.title}</a></h2>
                                 <h3>{post.body}</h3>
                             </div>
                         )

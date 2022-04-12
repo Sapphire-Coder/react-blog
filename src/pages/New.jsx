@@ -13,7 +13,8 @@ export default function New() {
     }
 
     return (
-        <div>
+        <div className='main'>
+            <h1>Create New Post</h1>
             <form onSubmit={newPost}>
                 <input type = 'text' name = 'title' />
                 <input type = 'text' name = 'body' />

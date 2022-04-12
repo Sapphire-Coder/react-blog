@@ -7,10 +7,14 @@ export default function Show() {
     const navigate = useNavigate()
     const { id } = useParams()
     const [data, setData] = useState({})
+    const [comments, setComments] = useState([])
 
     useEffect(() => {
-        getPost(id).then(res => setData(res.data))
-    })
+        getPost(id).then(res => {
+            setData(res.data)
+            setComments(res.data.comments)
+        })
+    }, [])
 
     return (
         <div>
@@ -19,11 +23,13 @@ export default function Show() {
             <button onClick = {() => navigate(`/${id}/edit`)}>Edit Post</button>
             <div>
                 {
-                    data.comments.map(comment => {
-                        <div>
-                            <h3>{comment.name}</h3>
-                            <p>{comment.message}</p>
-                        </div>
+                    comments.map((comment, i) => {
+                        return (
+                            <div key = {i}>
+                                <h3>{comment.name}</h3>
+                                <p>{comment.message}</p>
+                            </div>
+                        )
                     })
                 }
             </div>

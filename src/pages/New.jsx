@@ -17,6 +17,7 @@ export default function New() {
             <form onSubmit={newPost}>
                 <input type = 'text' name = 'title' />
                 <input type = 'text' name = 'body' />
+                <input type = 'submit' />
             </form>
         </div>
     )

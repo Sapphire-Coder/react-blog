@@ -2,6 +2,8 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import New from './pages/New'
+import Show from './pages/Show'
+import Edit from './pages/Edit'
 
 const App = () => {
 
@@ -13,9 +15,9 @@ const App = () => {
       </nav>
       <Routes>
         <Route path = '/' element = { <Home /> } />
-        <Route path = '/:id' />
+        <Route path = '/:id' element = { <Show /> } />
         <Route path = '/new' element = { <New /> } />
-        <Route path = '/:id/edit' />
+        <Route path = '/:id/edit' element = { <Edit /> } />
       </Routes>
     </Router>
   )

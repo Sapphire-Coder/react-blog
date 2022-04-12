@@ -7,7 +7,6 @@ export default function Home() {
 
     useEffect(() => {
         getPosts().then(res => setData(res.data))
-        console.log(data)
     }, [])
 
     return (
@@ -18,7 +17,7 @@ export default function Home() {
                     data.map((post, i) => {
                         return(
                             <div key = {i}>
-                                <h2>{post.title}</h2>
+                                <a href={`/${post._id}`} ><h2>{post.title}</h2></a>
                                 <h3>{post.body}</h3>
                             </div>
                         )

@@ -30,30 +30,34 @@ export default function Show() {
         <div className='main'>
             <div id = 'post'>
                 <h1>{data.title}</h1>
-                <h3>{data.body}</h3>
+                <div id = 'context'>
+                    <h3>{data.body}</h3>
+                </div>
                 <div id = 'editBtn'>
                    <button onClick = {() => navigate(`/${id}/edit`)}>Edit Post</button>
                 </div>
             </div>
-            <div>
+            <div id = 'commentSection'>
                 {
                     comments.map((comment, i) => {
                         return (
-                            <div key = {i}>
+                            <div key = {i} className = 'comment'>
+                                <h3 style={{textDecorationLine: 'underline'}}>Name:</h3>
                                 <h3>{comment.name}</h3>
+                                <p style={{textDecorationLine: 'underline'}}>Comment:</p>
                                 <p>{comment.message}</p>
                             </div>
                         )
                     })
                 }
+                <form onSubmit={addComment} id = 'commentBox'>
+                    <label>Name: </label>
+                    <input type = 'text' name = 'name' /> <br/>
+                    <label>Comment: </label>
+                    <textarea name = 'message' cols = '40' rows = '10'></textarea>
+                    <input type = 'submit' id = 'comBtn'/>
+                </form>
             </div>
-            <form onSubmit={addComment} id = 'commentBox'>
-                <label>Name</label><br/>
-                <input type = 'text' name = 'name' /> <br/>
-                <label>Comment</label><br/>
-                <input type = 'text' name = 'message' /> <br/>
-                <input type = 'submit' />
-            </form>
         </div>
     )
 }

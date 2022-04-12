@@ -29,7 +29,7 @@ export default function Edit() {
             <h1>Edit Post</h1>
             <form onSubmit={updPost}>
                 <input type = 'text' name = 'title' defaultValue={data.title} />
-                <input type = 'text' name = 'body' defaultValue={data.body} />
+                <textarea name = 'body' cols = '80' rows = '20' defaultValue={data.body}></textarea>
                 <input type = 'submit' />
             </form>
             <button type = 'submit' onClick = {delPost}>Delete Post</button>

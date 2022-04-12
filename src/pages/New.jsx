@@ -17,7 +17,7 @@ export default function New() {
             <h1>Create New Post</h1>
             <form onSubmit={newPost}>
                 <input type = 'text' name = 'title' />
-                <input type = 'text' name = 'body' />
+                <textarea name = 'body' cols = '80' rows = '20'></textarea>
                 <input type = 'submit' />
             </form>
         </div>

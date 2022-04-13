@@ -15,11 +15,15 @@ export default function New() {
     return (
         <div className='main'>
             <h1>Create New Post</h1>
-            <form onSubmit={newPost}>
-                <input type = 'text' name = 'title' />
-                <textarea name = 'body' cols = '80' rows = '20'></textarea>
-                <input type = 'submit' />
-            </form>
+            <div id = 'newForm'>
+                <form onSubmit={newPost}>
+                    <label>Title:</label>
+                    <input type = 'text' name = 'title' />
+                    <label>Post:</label>
+                    <textarea name = 'body' cols = '80' rows = '20'></textarea>
+                    <input type = 'submit' />
+                </form>
+            </div>
         </div>
     )
 }

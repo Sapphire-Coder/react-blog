@@ -8,7 +8,7 @@ nav{
     justify-content: space-around;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 99.3%;
     height: 25px;
     border-color: rgb(216, 140, 154);
     background-color: rgb(138, 43, 226);
@@ -18,7 +18,7 @@ nav{
 }
 
 nav a{
-    color: orchid
+    color: rgb(132, 220, 207 );
 }
 
 h1{
@@ -32,6 +32,10 @@ h1{
 #postContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+#postContainer a{
+    color: orchid;
 }
 
 #postContainer h2{
@@ -126,4 +130,44 @@ h1{
 textarea{
     resize: none;
     margin-bottom: 20px;
+}
+
+#newForm{
+    width: 50%;
+    margin: auto;
+    border-style: groove;
+    border-width: 5px;
+    border-color: rgb(216, 140, 154);
+    background-color: rgb(21, 31, 59);
+}
+
+#newForm form{
+    display: grid;
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#editForm{
+    width: 50%;
+    margin: auto;
+    border-style: groove;
+    border-width: 5px;
+    border-color: rgb(216, 140, 154);
+    background-color: rgb(21, 31, 59);
+}
+
+#editForm form{
+    display: grid;
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#editForm div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }

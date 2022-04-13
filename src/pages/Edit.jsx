@@ -27,12 +27,18 @@ export default function Edit() {
     return (
         <div className='main'>
             <h1>Edit Post</h1>
-            <form onSubmit={updPost}>
-                <input type = 'text' name = 'title' defaultValue={data.title} />
-                <textarea name = 'body' cols = '80' rows = '20' defaultValue={data.body}></textarea>
-                <input type = 'submit' />
-            </form>
-            <button type = 'submit' onClick = {delPost}>Delete Post</button>
+            <div id = 'editForm'>
+                <form onSubmit={updPost}>
+                    <label>Title:</label>
+                    <input type = 'text' name = 'title' defaultValue={data.title} />
+                    <lable>Post:</lable>
+                    <textarea name = 'body' cols = '80' rows = '20' defaultValue={data.body}></textarea>
+                    <input type = 'submit' />
+                </form>
+                <div>
+                    <button type = 'submit' onClick = {delPost}>Delete Post</button>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-const URL = 'http://localhost:3001/posts/'
+const URL = 'https://jm-blog-api.herokuapp.com/posts/'
 
 export const getPosts = () => {
     return axios.get(URL)

@@ -7,10 +7,6 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "gh-pages": "^3.2.3",
-    "mongoose": "^6.2.9",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.2.2",
@@ -40,6 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://sapphire-coder.github.io/react-blog/"
+  }
 }

@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
+    "gh-pages": "^3.2.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
@@ -16,7 +17,9 @@
   "scripts": {
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +41,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "app.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sapphire-Coder/react-blog.git"
@@ -49,5 +51,5 @@
   "bugs": {
     "url": "https://github.com/Sapphire-Coder/react-blog/issues"
   },
-  "homepage": "https://github.com/Sapphire-Coder/react-blog#readme"
+  "homepage": "https://Sapphire-Coder.github.io/react-blog"
 }

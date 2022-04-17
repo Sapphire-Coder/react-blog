@@ -116,11 +116,16 @@ h1{
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
     background-color: rgb(138, 43, 226);
     color: rgb(132, 220, 207 );
+}
+
+#commentBox form{
+    display: grid;
+    width: 60%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #comBtn{

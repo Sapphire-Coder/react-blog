@@ -50,13 +50,15 @@ export default function Show() {
                         )
                     })
                 }
-                <form onSubmit={addComment} id = 'commentBox'>
-                    <label>Name: </label>
-                    <input type = 'text' name = 'name' /> <br/>
-                    <label>Comment: </label>
-                    <textarea name = 'message' cols = '40' rows = '10'></textarea>
-                    <input type = 'submit' id = 'comBtn'/>
-                </form>
+                <div id = 'commentBox'>
+                    <form onSubmit={addComment}>
+                        <label>Name: </label>
+                        <input type = 'text' name = 'name' />
+                        <label>Comment: </label>
+                        <textarea name = 'message' cols = '40' rows = '10'></textarea>
+                        <input type = 'submit' id = 'comBtn'/>
+                    </form>
+                </div>
             </div>
         </div>
     )
